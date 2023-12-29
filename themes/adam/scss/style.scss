@@ -1,0 +1,161 @@
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+@import 'technology';
+@import 'blockquotes';
+@import 'code';
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@200&display=swap');
+
+body {  
+    /*width: 1080px;*/
+    /*padding-left: 5%;*/
+    background-color: $background-color;
+    min-height: 1000px;
+}
+
+* {
+    color: $font-color;
+    font-family: montserrat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: agbalumo;
+}
+
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $accent-color;
+}
+
+/* Navfield */
+
+.nav {
+    max-height: 114px;
+}
+
+/* main */
+
+.main {
+    background-color: $main-background;
+    color: $font-color;
+}
+
+
+/* Footer */
+
+.footer, .header a {
+    text-decoration: none;
+}
+
+
+/* Text over image */
+.imagetext {
+    position: relative;
+    text-align: center;
+    color: $font-alternative-color;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: $font-alternative-color;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: $font-alternative-color;
+  }
+
+
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Fontchanges */
+  .top-left h1 {
+    color: $white;
+    text-shadow: 1px 1px 2px $font-color;
+
+  }
+  
+  .centered p {
+    color: $white;
+    text-shadow: 1px 1px 2px $font-color;
+  }
+  
+
+@media screen and (max-width: 960px) {
+    body {
+        max-width: fit-content;
+        padding-left: 0%;
+    }
+    
+    
+    .landingpage {
+        max-width: 50%; 
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imagetext {
+        max-width: fit-content;
+    }
+    
+    .main {
+        max-width: fit-content;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        /*max-width: 30%; */
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .top-left h1 {
+        font-size: medium;
+      }
+      
+      .centered p {
+        font-size: small;
+      }
+
+}
