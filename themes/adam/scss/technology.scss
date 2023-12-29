@@ -1,15 +1,67 @@
 /* technology.scss */
 
-.landingpage {
+.highlights {
     display: grid;
     gap: 1em 1em;
+    padding-left: 50px;
+    justify-self: center;
 }
 
-.landingpage h1 {
+.highlights h1 {
     grid-column: span 3;
     justify-self: center;
 }
 
+.aboutpage {
+    display: grid;
+    gap: 1em 1em;
+    padding-left: 5px;
+}
+
+.aboutpage h1 {
+    grid-column: span 3;
+    justify-self: center;
+}
+
+.about {
+    margin:auto;
+    padding: 2em;
+    max-width: 900px;
+    justify-self: center;
+}
+
+.highlights1 {
+    display: grid;
+    max-width: auto;
+    grid-template-columns: 400px 400px 400px;
+    gap: 2px;
+    align-content:inherit;
+
+}
+
+.highlights2 {
+    display: grid;
+    max-width: auto;
+    grid-template-columns: 400px 400px 400px;
+    gap: 2px;
+}
+
+.images {
+    padding:5px 5px 5px;
+    border: solid $font-color;
+    text-align: center;
+    background-color: $background-alternative-color;
+    text-decoration: none;
+}
+
+.images a{
+    text-decoration: none;
+}
+figcaption {
+    
+    justify-content: center;
+    background-color: $background-alternative-color;
+}
 /*
 .header a {
     text-decoration: none;

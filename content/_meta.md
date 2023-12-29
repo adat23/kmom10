@@ -24,6 +24,9 @@ Social:
     - title: link till instagram
       url: https://instagram.com
       icon: fab fa-instagram
+    - title: link till spotift
+      url: https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk?si=626f0cca519248fe
+      icon: fab fa-spotify
 Test:
     - title: Icon
       icon: fas fa-guitar
