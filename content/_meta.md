@@ -1,5 +1,5 @@
 ---
-Logo: image/artist/art-ist114.jpg
+Logo: image/artist/art-ist2.png
 Tagline: Move it with Art-ist!
 Background: image/artist/artistheader.webp
 Social:

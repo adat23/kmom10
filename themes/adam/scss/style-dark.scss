@@ -12,13 +12,16 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@200&display=swap');
 
-body {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
+body {  
+    /*width: 1080px;*/
+    /*padding-left: 5%;*/
+    background-color: $background-dark;
+    min-height: 750px;
+    position: relative;
+    background-repeat: no-repeat;
 }
 
 * {
-    color: $font-color;
     font-family: montserrat;
 }
 
@@ -26,6 +29,196 @@ h1, h2, h3, h4, h5, h6 {
     font-family: agbalumo;
 }
 
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $accent-dark;
+}
+
+.header a {
+    text-decoration: none;
+    color: $font-dark;
+}
+
+/* Navfield */
+
+.nav {
+    max-height: 114px;
+}
+
+.nav a, .nav-toggle {
+    color: $font-dark;
+}
+/* main */
+
 .main {
-    background-color: yellow;
+    background-color: $main-bg-dark;
+    color: $font-dark;
+    margin-bottom: 50px
+}
+
+.about {
+    background-color: $main-bg-dark;
+    color: $font-dark;
+}
+
+.aboutpage p, h1{
+    color: $white;
+}
+
+/* Footer */
+
+.footer {
+    padding: 0px 0;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background-color: $background-dark;
+    color: $font-alternative-dark;
+}
+
+.footer a {
+    text-decoration: none;
+    color: $font-alternative-dark;
+}
+
+
+/* Text over image */
+.imagetext {
+    position: relative;
+    text-align: center;
+    color: $font-alternative-color;
+    text-shadow: 0 0 5px $font-color;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: $font-alternative-color;
+    
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 2px;
+    left: 16px;
+    color: $font-alternative-color;
+  }
+
+
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Fontchanges */
+  .top-left h1 {
+    color: $white;
+    text-shadow: 1px 1px 2px $font-color;
+  }
+  
+  .centered p {
+    color: $white;
+    text-shadow: 1px 1px 2px $font-color;
+  }
+
+/* responsive */
+@media screen and (max-width: 960px) {
+    body {
+        max-width: fit-content;
+        padding-left: 0%;
+    }   
+    
+    .highlights {
+        max-width: fit-content; 
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding-left: 15px;
+    }
+
+    .highlights h1 {
+        margin: 0;
+    }
+
+    .highlights1{
+        grid-template-columns: 200px;
+    }
+
+    .highlights2{
+        grid-template-columns: 200px;
+    }
+
+    .imagetext {
+        max-width: fit-content;
+        color: $font-color;
+    }
+    
+    .main {
+        max-width: fit-content;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        max-width: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav {
+        max-width: 50%;
+    }
+    .bottom-left {
+        color: $font-color;
+        text-shadow: 1px 1px $main-background;
+    }
+
+    .top-left {
+        top: 0px;
+        left: 0px;
+    }
+
+    .top-left h1 {
+        font-size: medium;
+    }
+      
+    .centered p {
+        font-size: small;
+    }
+    
+    .images {
+        column-width: 30%;
+        grid-column: 1;
+    }
+    
 }

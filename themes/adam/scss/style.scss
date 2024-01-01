@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 114px;
 }
 
+.nav a, .nav-toggle {
+    color: $font-color;
+}
+
 /* main */
 
 .main {
@@ -105,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Top left text */
   .top-left {
     position: absolute;
-    top: 8px;
+    top: 2px;
     left: 16px;
     color: $font-alternative-color;
   }
@@ -189,6 +193,15 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav {
         max-width: 50%;
+    }
+    .bottom-left {
+        color: $font-color;
+        text-shadow: 1px 1px $main-background;
+    }
+
+    .top-left {
+        top: 0px;
+        left: 0px;
     }
 
     .top-left h1 {
