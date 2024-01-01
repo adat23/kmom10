@@ -9,8 +9,8 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import '../../shared/fontawesome/scss/brands';
 @import '../../shared/fontawesome/scss/solid';
 @import '../../shared/fontawesome/scss/regular';
-
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@200&display=swap');
+/*font */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Montserrat:wght@200&display=swap');
 
 body {  
     /*width: 1080px;*/
@@ -25,10 +25,13 @@ body {
 * {
     color: $font-color;
     font-family: montserrat;
+    font-weight: bold;
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: agbalumo;
+
 }
 
 
@@ -47,6 +50,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .header a {
     text-decoration: none;
+}
+
+.title p {
+    font-family: long cang;
+    font-size: large;
 }
 
 /* Navfield */
@@ -86,8 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a {
     text-decoration: none;
-}
 
+}
 
 /* Text over image */
 .imagetext {
@@ -147,74 +155,3 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 1px 2px $font-color;
   }
 
-/* responsive */
-@media screen and (max-width: 960px) {
-    body {
-        max-width: fit-content;
-        padding-left: 0%;
-    }   
-    
-    .highlights {
-        max-width: fit-content; 
-        grid-template-columns: repeat(1, 1fr);
-        margin: 0;
-        padding-left: 15px;
-    }
-
-    .highlights h1 {
-        margin: 0;
-    }
-
-    .highlights1{
-        grid-template-columns: 200px;
-    }
-
-    .highlights2{
-        grid-template-columns: 200px;
-    }
-
-    .imagetext {
-        max-width: fit-content;
-        color: $font-color;
-    }
-    
-    .main {
-        max-width: fit-content;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
-    .header {
-        max-width: fit-content;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .nav {
-        max-width: 50%;
-    }
-    .bottom-left {
-        color: $font-color;
-        text-shadow: 1px 1px $main-background;
-    }
-
-    .top-left {
-        top: 0px;
-        left: 0px;
-    }
-
-    .top-left h1 {
-        font-size: medium;
-    }
-      
-    .centered p {
-        font-size: small;
-    }
-    
-    .images {
-        column-width: 30%;
-        grid-column: 1;
-    }
-    
-}

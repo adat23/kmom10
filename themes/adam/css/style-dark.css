@@ -5,7 +5,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Long+Cang&family=Lora:wght@600&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -310,6 +311,9 @@ template {
 
 /* Light mode */
 /* dark mode */
+/*$font-dark: #BABABA;*/
+/*$font-alternative-dark: #BB86FC;*/
+/*$accent-dark: #46325E;*/
 /* Gemensamma */
 /* technology.scss */
 .highlights {
@@ -383,6 +387,57 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+@media screen and (max-width: 960px) {
+  body {
+    max-width: fit-content;
+    padding-left: 0%;
+  }
+  .highlights {
+    max-width: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding-left: 15px;
+  }
+  .highlights h1 {
+    margin: 0;
+  }
+  .highlights1 {
+    grid-template-columns: 200px;
+  }
+  .highlights2 {
+    grid-template-columns: 200px;
+  }
+  .imagetext {
+    max-width: fit-content;
+  }
+  .main {
+    max-width: fit-content;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    max-width: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav {
+    max-width: 50%;
+  }
+  .top-left {
+    top: 0px;
+    left: 0px;
+  }
+  .top-left h1 {
+    font-size: medium;
+  }
+  .centered p {
+    font-size: small;
+  }
+  .images {
+    column-width: 30%;
+    grid-column: 1;
+  }
+}
 blockquote {
   font-style: italic;
   margin-left: 1em;
@@ -6542,11 +6597,12 @@ body {
 }
 
 * {
-  font-family: montserrat;
+  font-family: lora;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: agbalumo;
+  font-family: bebas neue;
 }
 
 /* Header */
@@ -6559,12 +6615,16 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #46325E;
+  background-color: #AB2222;
 }
 
 .header a {
   text-decoration: none;
-  color: #BABABA;
+  color: #ffffff;
+}
+
+.title p {
+  font-family: long cang;
 }
 
 /* Navfield */
@@ -6573,25 +6633,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav a, .nav-toggle {
-  color: #BABABA;
+  color: #ffffff;
 }
 
 /* main */
 .main {
   background-color: #696969;
-  color: #BABABA;
+  color: #ffffff;
   margin-bottom: 50px;
 }
 
 .about {
   background-color: #696969;
-  color: #BABABA;
-}
-
-.aboutpage p, h1 {
   color: #ffffff;
 }
 
+/*
+.aboutpage p, h1{
+    color: $white;
+}
+*/
 /* Footer */
 .footer {
   padding: 0px 0;
@@ -6601,12 +6662,16 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   text-align: center;
   background-color: #121212;
-  color: #BB86FC;
+  color: #DE0000;
 }
 
 .footer a {
   text-decoration: none;
-  color: #BB86FC;
+  color: #DE0000;
+}
+
+img, embed, object, video {
+  filter: brightness(50%);
 }
 
 /* Text over image */
@@ -6664,62 +6729,4 @@ h1, h2, h3, h4, h5, h6 {
 .centered p {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
-}
-
-/* responsive */
-@media screen and (max-width: 960px) {
-  body {
-    max-width: fit-content;
-    padding-left: 0%;
-  }
-  .highlights {
-    max-width: fit-content;
-    grid-template-columns: repeat(1, 1fr);
-    margin: 0;
-    padding-left: 15px;
-  }
-  .highlights h1 {
-    margin: 0;
-  }
-  .highlights1 {
-    grid-template-columns: 200px;
-  }
-  .highlights2 {
-    grid-template-columns: 200px;
-  }
-  .imagetext {
-    max-width: fit-content;
-    color: #000000;
-  }
-  .main {
-    max-width: fit-content;
-  }
-  .sidebar {
-    display: none;
-  }
-  .header {
-    max-width: fit-content;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .nav {
-    max-width: 50%;
-  }
-  .bottom-left {
-    color: #000000;
-    text-shadow: 1px 1px #D9D9D9;
-  }
-  .top-left {
-    top: 0px;
-    left: 0px;
-  }
-  .top-left h1 {
-    font-size: medium;
-  }
-  .centered p {
-    font-size: small;
-  }
-  .images {
-    column-width: 30%;
-    grid-column: 1;
-  }
 }

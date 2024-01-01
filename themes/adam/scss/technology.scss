@@ -73,3 +73,69 @@ img, embed, object, video {
     max-width: 100%;
 }
 
+
+@media screen and (max-width: 960px) {
+    body {
+        max-width: fit-content;
+        padding-left: 0%;
+    }   
+    
+    .highlights {
+        max-width: fit-content; 
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding-left: 15px;
+    }
+
+    .highlights h1 {
+        margin: 0;
+    }
+
+    .highlights1{
+        grid-template-columns: 200px;
+    }
+
+    .highlights2{
+        grid-template-columns: 200px;
+    }
+
+    .imagetext {
+        max-width: fit-content;
+    }
+    
+    .main {
+        max-width: fit-content;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        max-width: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav {
+        max-width: 50%;
+    }
+
+    .top-left {
+        top: 0px;
+        left: 0px;
+    }
+
+    .top-left h1 {
+        font-size: medium;
+    }
+      
+    .centered p {
+        font-size: small;
+    }
+    
+    .images {
+        column-width: 30%;
+        grid-column: 1;
+    }
+    
+}

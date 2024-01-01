@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Montserrat:wght@200&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -310,6 +310,9 @@ template {
 
 /* Light mode */
 /* dark mode */
+/*$font-dark: #BABABA;*/
+/*$font-alternative-dark: #BB86FC;*/
+/*$accent-dark: #46325E;*/
 /* Gemensamma */
 /* technology.scss */
 .highlights {
@@ -383,6 +386,57 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+@media screen and (max-width: 960px) {
+  body {
+    max-width: fit-content;
+    padding-left: 0%;
+  }
+  .highlights {
+    max-width: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding-left: 15px;
+  }
+  .highlights h1 {
+    margin: 0;
+  }
+  .highlights1 {
+    grid-template-columns: 200px;
+  }
+  .highlights2 {
+    grid-template-columns: 200px;
+  }
+  .imagetext {
+    max-width: fit-content;
+  }
+  .main {
+    max-width: fit-content;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    max-width: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav {
+    max-width: 50%;
+  }
+  .top-left {
+    top: 0px;
+    left: 0px;
+  }
+  .top-left h1 {
+    font-size: medium;
+  }
+  .centered p {
+    font-size: small;
+  }
+  .images {
+    column-width: 30%;
+    grid-column: 1;
+  }
+}
 blockquote {
   font-style: italic;
   margin-left: 1em;
@@ -6532,6 +6586,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+/*font */
 body {
   /*width: 1080px;*/
   /*padding-left: 5%;*/
@@ -6545,6 +6600,7 @@ body {
 * {
   color: #000000;
   font-family: montserrat;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -6566,6 +6622,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .header a {
   text-decoration: none;
+}
+
+.title p {
+  font-family: long cang;
+  font-size: large;
 }
 
 /* Navfield */
@@ -6659,62 +6720,4 @@ h1, h2, h3, h4, h5, h6 {
 .centered p {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
-}
-
-/* responsive */
-@media screen and (max-width: 960px) {
-  body {
-    max-width: fit-content;
-    padding-left: 0%;
-  }
-  .highlights {
-    max-width: fit-content;
-    grid-template-columns: repeat(1, 1fr);
-    margin: 0;
-    padding-left: 15px;
-  }
-  .highlights h1 {
-    margin: 0;
-  }
-  .highlights1 {
-    grid-template-columns: 200px;
-  }
-  .highlights2 {
-    grid-template-columns: 200px;
-  }
-  .imagetext {
-    max-width: fit-content;
-    color: #000000;
-  }
-  .main {
-    max-width: fit-content;
-  }
-  .sidebar {
-    display: none;
-  }
-  .header {
-    max-width: fit-content;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .nav {
-    max-width: 50%;
-  }
-  .bottom-left {
-    color: #000000;
-    text-shadow: 1px 1px #D9D9D9;
-  }
-  .top-left {
-    top: 0px;
-    left: 0px;
-  }
-  .top-left h1 {
-    font-size: medium;
-  }
-  .centered p {
-    font-size: small;
-  }
-  .images {
-    column-width: 30%;
-    grid-column: 1;
-  }
 }
