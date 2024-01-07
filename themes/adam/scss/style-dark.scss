@@ -1,8 +1,6 @@
 @import '../../node_modules/normalize.css/normalize';
 @import 'variables';
-@import 'technology';
-@import 'blockquotes';
-@import 'code';
+@import 'common';
 
 @import '../../shared/fontawesome/scss/fontawesome';
 $fa-font-path: '../../shared/fontawesome/webfonts';
@@ -11,11 +9,9 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import '../../shared/fontawesome/scss/regular';
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Long+Cang&family=Lora:wght@600&display=swap');
+
 body {  
-    /*width: 1080px;*/
-    /*padding-left: 5%;*/
     background-color: $background-dark;
-    min-height: 750px;
     position: relative;
     background-repeat: no-repeat;
 }
@@ -29,22 +25,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: bebas neue;
 }
 
-
 /* Header */
-.site-header {
-    display: flex;
-    align-items: center;
-}
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $accent-dark;
 }
 
 .header a {
-    text-decoration: none;
     color: $font-white;
 }
 
@@ -54,106 +41,47 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navfield */
 
-.nav {
-    max-height: 114px;
-}
-
 .nav a, .nav-toggle {
     color: $font-white;
 }
+
 /* main */
 
 .main {
     background-color: $main-bg-dark;
     color: $font-white;
-    margin-bottom: 50px
 }
 
 .about {
     background-color: $main-bg-dark;
     color: $font-white;
 }
-/*
-.aboutpage p, h1{
-    color: $white;
-}
-*/
+
 /* Footer */
 
 .footer {
-    padding: 0px 0;
-    position:sticky;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    text-align: center;
     background-color: $background-dark;
     color: $font-dark;
 }
 
 .footer a {
-    text-decoration: none;
     color: $font-dark;
 }
+
+/* images */
 
 img, embed, object, video {
 filter: brightness(50%); 
 }
 
-/* Text over image */
-.imagetext {
-    position: relative;
-    text-align: center;
-    color: $font-alternative-color;
-    text-shadow: 0 0 5px $font-color;
-  }
-  
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color: $font-alternative-color;
-    
-  }
-  
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 2px;
-    left: 16px;
-    color: $font-alternative-color;
-  }
-
-
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
   /* Fontchanges */
-  .top-left h1 {
+
+.top-left h1 {
     color: $white;
     text-shadow: 1px 1px 2px $font-color;
-  }
+}
   
-  .centered p {
+.centered p {
     color: $white;
     text-shadow: 1px 1px 2px $font-color;
-  }
+}

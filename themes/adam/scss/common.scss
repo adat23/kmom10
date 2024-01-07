@@ -1,16 +1,54 @@
-/* technology.scss */
+/* common.scss */
 
-.highlights {
-    display: grid;
-    gap: 1em 1em;
-    padding-left: 50px;
-    justify-self: center;
+body {
+    min-height: 750px;
 }
 
-.highlights h1 {
-    grid-column: span 3;
-    justify-self: center;
+/* Header */
+
+.site-header {
+    display: flex;
+    align-items: center;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+/* Nav */
+/*
+.nav {
+    max-height: 114px;
+}
+*/
+/* Footer */ 
+
+.footer {
+    padding: 0px 0;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+/* Main */
+
+.main {
+    margin-bottom: 50px
+}
+
+/* About */ 
 
 .aboutpage {
     display: grid;
@@ -26,7 +64,23 @@
 .about {
     margin:auto;
     padding: 2em;
+    min-height: 600px;
     max-width: 900px;
+    justify-self: center;
+    margin-bottom: 50px;
+}
+
+/* Highlights */
+
+.highlights {
+    display: grid;
+    gap: 1em 1em;
+    padding-left: 50px;
+    justify-self: center;
+}
+
+.highlights h1 {
+    grid-column: span 3;
     justify-self: center;
 }
 
@@ -46,6 +100,48 @@
     gap: 2px;
 }
 
+/* Text over image */
+
+.imagetext {
+    position: relative;
+    text-align: center;
+    color: $font-alternative-color;
+    text-shadow: 0 0 5px $font-color;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: $font-alternative-color;
+}
+  
+.top-left {
+    position: absolute;
+    top: 2px;
+    left: 16px;
+    color: $font-alternative-color;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+  
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+  
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .images {
     padding:5px 5px 5px;
     border: solid $font-color;
@@ -63,20 +159,19 @@ figcaption {
     justify-content: center;
     background-color: $background-alternative-color;
 }
-/*
-.header a {
-    text-decoration: none;
-}
-*/
 
 img, embed, object, video {
     max-width: 100%;
 }
 
+.hidden img {
+    float: right;
+}
+
 
 @media screen and (max-width: 960px) {
     body {
-        max-width: fit-content;
+        max-width: 100%;
         padding-left: 0%;
     }   
     
@@ -104,7 +199,7 @@ img, embed, object, video {
     }
     
     .main {
-        max-width: fit-content;
+        max-width: 100%;
     }
 
     .sidebar {
@@ -112,14 +207,14 @@ img, embed, object, video {
     }
 
     .header {
-        max-width: fit-content;
+        /*max-width: fit-content;*/
         grid-template-columns: repeat(1, 1fr);
     }
-
+/*
     .nav {
         max-width: 50%;
     }
-
+*/
     .top-left {
         top: 0px;
         left: 0px;

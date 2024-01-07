@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +6,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Montserrat:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Long+Cang&family=Lora:wght@600&display=swap");
 html {
   line-height: 1.15; /* 1 */
@@ -309,25 +309,57 @@ template {
   display: none;
 }
 
-/* Light mode */
-/* dark mode */
-/*$font-dark: #BABABA;*/
-/*$font-alternative-dark: #BB86FC;*/
-/*$accent-dark: #46325E;*/
+/* Variables.scss */
+/* ljus */
+/* mörk */
 /* Gemensamma */
-/* technology.scss */
-.highlights {
-  display: grid;
-  gap: 1em 1em;
-  padding-left: 50px;
-  justify-self: center;
+/* common.scss */
+body {
+  min-height: 750px;
 }
 
-.highlights h1 {
-  grid-column: span 3;
-  justify-self: center;
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+/* Nav */
+/*
+.nav {
+    max-height: 114px;
+}
+*/
+/* Footer */
+.footer {
+  padding: 0px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+/* Main */
+.main {
+  margin-bottom: 50px;
+}
+
+/* About */
 .aboutpage {
   display: grid;
   gap: 1em 1em;
@@ -342,7 +374,22 @@ template {
 .about {
   margin: auto;
   padding: 2em;
+  min-height: 600px;
   max-width: 900px;
+  justify-self: center;
+  margin-bottom: 50px;
+}
+
+/* Highlights */
+.highlights {
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 50px;
+  justify-self: center;
+}
+
+.highlights h1 {
+  grid-column: span 3;
   justify-self: center;
 }
 
@@ -359,6 +406,47 @@ template {
   max-width: auto;
   grid-template-columns: 400px 600px 400px;
   gap: 2px;
+}
+
+/* Text over image */
+.imagetext {
+  position: relative;
+  text-align: center;
+  color: #B0CC00;
+  text-shadow: 0 0 5px #000000;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #B0CC00;
+}
+
+.top-left {
+  position: absolute;
+  top: 2px;
+  left: 16px;
+  color: #B0CC00;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .images {
@@ -378,18 +466,17 @@ figcaption {
   background-color: #e0fbfc;
 }
 
-/*
-.header a {
-    text-decoration: none;
-}
-*/
 img, embed, object, video {
   max-width: 100%;
 }
 
+.hidden img {
+  float: right;
+}
+
 @media screen and (max-width: 960px) {
   body {
-    max-width: fit-content;
+    max-width: 100%;
     padding-left: 0%;
   }
   .highlights {
@@ -411,18 +498,20 @@ img, embed, object, video {
     max-width: fit-content;
   }
   .main {
-    max-width: fit-content;
+    max-width: 100%;
   }
   .sidebar {
     display: none;
   }
   .header {
-    max-width: fit-content;
+    /*max-width: fit-content;*/
     grid-template-columns: repeat(1, 1fr);
   }
-  .nav {
-    max-width: 50%;
-  }
+  /*
+      .nav {
+          max-width: 50%;
+      }
+  */
   .top-left {
     top: 0px;
     left: 0px;
@@ -438,41 +527,6 @@ img, embed, object, video {
     grid-column: 1;
   }
 }
-blockquote {
-  font-style: italic;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 0.5em solid #f5f5f5;
-}
-
-code {
-  margin: 0 0.1em;
-  padding: 0.1em 0.2em;
-  border: 1px solid #ccc;
-  border-radius: 0.3em;
-  background: #f5f5f5;
-  font-family: monospace;
-  font-size: 0.85rem;
-  line-height: 1.9824;
-}
-
-pre {
-  padding: 0 1em;
-  border: 1px solid #ccc;
-  border-radius: 0.3em;
-  background: #f5f5f5;
-}
-
-pre code {
-  display: block;
-  margin: 0;
-  padding: 1.1111em 0;
-  border: 0 none;
-  background: transparent;
-  overflow-x: auto;
-  line-height: 1.4;
-}
-
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6588,10 +6642,7 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  /*width: 1080px;*/
-  /*padding-left: 5%;*/
   background-color: #121212;
-  min-height: 750px;
   position: relative;
   background-repeat: no-repeat;
 }
@@ -6606,20 +6657,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header */
-.site-header {
-  display: flex;
-  align-items: center;
-}
-
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #AB2222;
 }
 
 .header a {
-  text-decoration: none;
   color: #ffffff;
 }
 
@@ -6628,10 +6670,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navfield */
-.nav {
-  max-height: 114px;
-}
-
 .nav a, .nav-toggle {
   color: #ffffff;
 }
@@ -6640,7 +6678,6 @@ h1, h2, h3, h4, h5, h6 {
 .main {
   background-color: #696969;
   color: #ffffff;
-  margin-bottom: 50px;
 }
 
 .about {
@@ -6648,76 +6685,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/*
-.aboutpage p, h1{
-    color: $white;
-}
-*/
 /* Footer */
 .footer {
-  padding: 0px 0;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  text-align: center;
   background-color: #121212;
   color: #DE0000;
 }
 
 .footer a {
-  text-decoration: none;
   color: #DE0000;
 }
 
+/* images */
 img, embed, object, video {
   filter: brightness(50%);
-}
-
-/* Text over image */
-.imagetext {
-  position: relative;
-  text-align: center;
-  color: #B0CC00;
-  text-shadow: 0 0 5px #000000;
-}
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  color: #B0CC00;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 2px;
-  left: 16px;
-  color: #B0CC00;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* Fontchanges */

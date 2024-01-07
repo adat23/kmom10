@@ -1,7 +1,7 @@
 ---
 Title: Highlights
 Description: This is my highlights page.
-Template: technologies
+Template: highlights
 ---
 
 Art-ist Highlights

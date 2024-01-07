@@ -1,8 +1,6 @@
 @import '../../node_modules/normalize.css/normalize';
 @import 'variables';
-@import 'technology';
-@import 'blockquotes';
-@import 'code';
+@import 'common';
 
 @import '../../shared/fontawesome/scss/fontawesome';
 $fa-font-path: '../../shared/fontawesome/webfonts';
@@ -12,11 +10,8 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 /*font */
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Montserrat:wght@200&display=swap');
 
-body {  
-    /*width: 1080px;*/
-    /*padding-left: 5%;*/
+body { 
     background-color: $bg-two;
-    min-height: 750px;
     position: relative;
     background-image: linear-gradient(to bottom, $bg-one 0%, $bg-two 100%);
     background-repeat: no-repeat;
@@ -26,7 +21,6 @@ body {
     color: $font-color;
     font-family: montserrat;
     font-weight: bold;
-    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,34 +28,16 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
 /* Header */
-.site-header {
-    display: flex;
-    align-items: center;
-}
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $accent-color;
-}
-
-.header a {
-    text-decoration: none;
 }
 
 .title p {
     font-family: long cang;
-    font-size: large;
 }
 
 /* Navfield */
-
-.nav {
-    max-height: 114px;
-}
 
 .nav a, .nav-toggle {
     color: $font-color;
@@ -72,7 +48,6 @@ h1, h2, h3, h4, h5, h6 {
 .main {
     background-color: $main-background;
     color: $font-color;
-    margin-bottom: 50px
 }
 
 .about {
@@ -83,75 +58,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 
 .footer {
-    padding: 0px 0;
-    position:sticky;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    text-align: center;
     background-color: $bg-two;
 }
 
-.footer a {
-    text-decoration: none;
+/* Fontchanges */
 
+.top-left h1 {
+    color: $white;
+    text-shadow: 1px 1px 2px $font-color;
 }
-
-/* Text over image */
-.imagetext {
-    position: relative;
-    text-align: center;
-    color: $font-alternative-color;
-    text-shadow: 0 0 5px $font-color;
-  }
   
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color: $font-alternative-color;
-    
-  }
-  
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 2px;
-    left: 16px;
-    color: $font-alternative-color;
-  }
-
-
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  /* Fontchanges */
-  .top-left h1 {
+.centered p {
     color: $white;
     text-shadow: 1px 1px 2px $font-color;
-  }
-  
-  .centered p {
-    color: $white;
-    text-shadow: 1px 1px 2px $font-color;
-  }
-
+}
