@@ -17,7 +17,7 @@ Efter att jag valt att köra projektet Art-ist så gick jag in på Unsplash.com 
     </picture>
 </a>
 
-När jag väl hade hittat den föll jag direkt för färgen på kepsen som är med på bilden och valde att ha utgå från den färgen då jag tror att Art-ist(som har kepsen på sig) gillar den färgen. Kepsen fick även bli logotypen för hemsidan. 
+När jag väl hade hittat den föll jag direkt för färgen på kepsen som är med på bilden och valde att utgå från den färgen då jag tror att Art-ist(som har kepsen på sig) gillar den färgen. Kepsen fick även bli logotypen för hemsidan. 
 När väl det valet var gjort använde jag adobe color för att hitta en färgpalett som matchade färgen på kepsen. 
 
 <a href="%base_url%/image/artist/color/backtground-light.png" target="_blank">

@@ -74,8 +74,23 @@ img, embed, object, video {
 filter: brightness(50%); 
 }
 
-  /* Fontchanges */
+.images {
+    border: 1px solid $font-color;
+    background-color: $background-alternative-dark;
+    color: $font-white;
+}
 
+figcaption {
+    background-color: $background-alternative-dark;
+}
+
+/* Fontchanges */
+
+.highpage h1 {
+    color: $white;
+}
+
+    
 .top-left h1 {
     color: $white;
     text-shadow: 1px 1px 2px $font-color;

@@ -334,12 +334,6 @@ body {
   text-decoration: none;
 }
 
-/* Nav */
-/*
-.nav {
-    max-height: 114px;
-}
-*/
 /* Footer */
 .footer {
   padding: 0px 0;
@@ -381,10 +375,18 @@ body {
 }
 
 /* Highlights */
+.highpage {
+  margin: auto;
+  padding: 2em;
+  min-height: 600px;
+  max-width: 1400px;
+  margin-bottom: 50px;
+}
+
 .highlights {
   display: grid;
   gap: 1em 1em;
-  padding-left: 50px;
+  /*padding-left: 50px;*/
   justify-self: center;
 }
 
@@ -398,7 +400,6 @@ body {
   max-width: auto;
   grid-template-columns: 500px 400px 500px;
   gap: 2px;
-  align-content: inherit;
 }
 
 .highlights2 {
@@ -449,11 +450,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Images */
 .images {
   padding: 5px 5px 5px;
-  border: solid #000000;
   text-align: center;
-  background-color: #e0fbfc;
   text-decoration: none;
 }
 
@@ -463,17 +463,24 @@ body {
 
 figcaption {
   justify-content: center;
-  background-color: #e0fbfc;
 }
 
 img, embed, object, video {
   max-width: 100%;
 }
 
-.hidden img {
-  float: right;
+.artist iframe {
+  max-width: 400px;
 }
 
+@media screen and (max-width: 1290px) {
+  .highlights1 {
+    grid-template-columns: 200px 200px 200px;
+  }
+  .highlights2 {
+    grid-template-columns: 200px 200px 200px;
+  }
+}
 @media screen and (max-width: 960px) {
   body {
     max-width: 100%;
@@ -500,18 +507,18 @@ img, embed, object, video {
   .main {
     max-width: 100%;
   }
+  .about {
+    max-width: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding-left: 15px;
+  }
   .sidebar {
     display: none;
   }
   .header {
-    /*max-width: fit-content;*/
     grid-template-columns: repeat(1, 1fr);
   }
-  /*
-      .nav {
-          max-width: 50%;
-      }
-  */
   .top-left {
     top: 0px;
     left: 0px;
@@ -6700,7 +6707,21 @@ img, embed, object, video {
   filter: brightness(50%);
 }
 
+.images {
+  border: 1px solid #000000;
+  background-color: #919191;
+  color: #ffffff;
+}
+
+figcaption {
+  background-color: #919191;
+}
+
 /* Fontchanges */
+.highpage h1 {
+  color: #ffffff;
+}
+
 .top-left h1 {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;

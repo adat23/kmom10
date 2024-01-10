@@ -5,7 +5,7 @@ Description: Indexpage
 
 <div class="imagetext">
   <img src="%base_url%/image/artist/artistsv.png" alt="artistsv" style="width:100%;">
-  <div class="bottom-left">Detta är hemsidan för Arty Istalban "Art-ist", den senaste countrysångaren på marknaden.</div>
+  <div class="bottom-left">Detta är hemsidan för Artur Istalban "Art-ist", den senaste countrysångaren på marknaden.</div>
   <div class="top-left"></div>
   <div class="top-right"></div>
   <div class="bottom-right"></div>

@@ -25,10 +25,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: agbalumo;
-
 }
 
 /* Header */
+
 .header {
     background-color: $accent-color;
 }
@@ -55,10 +55,26 @@ h1, h2, h3, h4, h5, h6 {
     color: $font-color;
 }
 
+.highpage {
+    background-color: $main-background;
+    color: $font-color;
+}
+
 /* Footer */
 
 .footer {
     background-color: $bg-two;
+}
+
+/* Images */
+
+.images {
+    border: 1px solid $font-color;
+    background-color: $background-alternative-color;
+}
+
+figcaption {
+    background-color: $background-alternative-color;
 }
 
 /* Fontchanges */
